@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 body {
     @include set-background($light-color);
     font-family: $font-stack;
@@ -31,7 +32,7 @@ a {
             list-style-type: none;
         }
         li {
-            padding: 15px 30px;
+            padding: 1rem 2rem;
             .selected {
                 font-weight: bold;
             }
@@ -49,11 +50,11 @@ a {
         align-items: center;
         justify-content: space-between;
         h1 {
-            font-size: 50px;
+            font-size: 3rem;
             line-height: 1.2;
         }
         img {
-            border-radius: 180px;
+            border-radius: 10rem;
             width: 500px;
         }
         ul {
