@@ -1,0 +1,71 @@
+@import "config";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include set-background($light-color);
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.landing {
+    @include set-background($primary-color);
+    min-height: 500px;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+        li {
+            padding: 15px 30px;
+            .selected {
+                font-weight: bold;
+            }
+        }
+        a {
+            color: set-text-color($primary-color);
+        }
+        a:hover {
+            color: darken($secondary-color, 10%);
+        }
+    }
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+        img {
+            border-radius: 180px;
+            width: 500px;
+        }
+        ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+        .contact-title {
+            font-weight: bold;
+        }
+    }
+}
+
+@import "utilities";
+@import "buttons";
+@import "mobile";
